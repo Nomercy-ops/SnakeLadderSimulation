@@ -33,4 +33,10 @@ public class SnakeLadderSimulation {
 
 	}
 
+	public static int getDice (int diceRoll)
+	    {
+	        diceRoll = (int)(Math.random()*6 )+1 ;
+	       return diceRoll;
+	    }
+
 }

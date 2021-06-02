@@ -36,10 +36,26 @@ public class SnakeLadderSimulation {
             	userPosition = getPosition(userPosition, userRoll, snakesLaddersArray);
             	System.out.println ("You are currently on square " + userPosition);
 
+		 if (userPosition == 100 )
+            {
+                userPosition = 0;
+                System.out.print ("Do You Want To Roll Again? Y or N     >  ");
+                playAgain = userInput1.readLine ();
+            }
+            else
+            {
+                System.out.print ("Do you want to play? Y or N     >  ");
+                playAgain = userInput1.readLine ();
+                if (playAgain.equals ("n") || playAgain.equals ("N")) {
+                    System.out.println ("You are currently on square " + userPosition);
+                	System.out.print ("Do you want to play? Y or N     >  ");
+                    playAgain = userInput1.readLine ();
+                }
+            }
 
-
+	}
 		return playAgain;
-	   }
+
 	}
 
 	public static int getDice (int diceRoll)

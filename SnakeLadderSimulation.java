@@ -1,4 +1,7 @@
 public class SnakeLadderSimulation {
+
+	static int numberOfDicePlayed = 0;
+
 	public static void main(String[] args){
 	  System.out.println ("Welcome To Snake Game Simulation");
 	   BufferedReader userInput = new BufferedReader (new InputStreamReader (System.in));
@@ -61,6 +64,7 @@ public class SnakeLadderSimulation {
 	public static int getDice (int diceRoll)
 	    {
 	        diceRoll = (int)(Math.random()*6 )+1 ;
+		numberOfDicePlayed +=1;
 	       return diceRoll;
 	    }
 
@@ -110,8 +114,8 @@ public class SnakeLadderSimulation {
 	        }
 	        else if (userPosition == 100)
 	        {
-	            System.out.println ("YOU WON, GOOD JOB!!!");
-	            System.out.println ("The number of times the dice was played to win the game is : " +numberOfDicePlayed);
+	             System.out.println ("The number of times the dice was played to win the game is : " +numberOfDicePlayed);
+		    System.out.println ("YOU WON, GOOD JOB!!!");
 
 	        }
 	        return userPosition;
